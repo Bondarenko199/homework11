@@ -1,0 +1,710 @@
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    transition: 0.3s all ease-out;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+select, input, textarea {
+    vertical-align:middle;
+}
+textarea {
+    vertical-align:top;
+}
+
+:focus {
+    outline:none;
+}
+
+input[type=submit] {
+    cursor:pointer;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    outline:none;
+    list-style:none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.introduction:before,
+.main-footer:before,
+.plan-your-diet:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #2ecc71;
+    z-index: -200;
+}
+
+#intro-bg,
+#footer-bg,
+#plan-your-diet-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.header-head,
+.main-logo,
+.main-nav {
+    overflow: hidden;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-app-button {
+    padding: 0 40px;
+    display: block;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    font: 18px "roboto-bold", sans-serif;
+    line-height: 40px;
+    color: #2ecc71;
+}
+
+.description-text-list h2,
+.plan-your-diet-header h2,
+.meal-text h2,
+.footer-headline-wrapper h2 {
+    font: 48px "roboto-light", sans-serif;
+}
+
+{
+    font: "roboto-bold", sans-serif;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FONTS----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url("../fonts/roboto/Roboto-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-light';
+    src: url("../fonts/roboto/Roboto-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url("../fonts/roboto/Roboto-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'segoe-black-italick';
+    src: url("../fonts/segoe/seguibli.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 18px "roboto-light", sans-serif;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*---------------------------------INTRODUCTION-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.introduction {
+    padding-top: 265px;
+    position: relative;
+    color: #fff;
+}
+
+.introduction .row {
+    padding-bottom: 180px;
+    position: relative;
+}
+
+#intro-bg {
+    background: url("../images/background/introduction_bg.png") 50% 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.main-header {
+    padding-top: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-logo {
+    width: 135px;
+    height: 40px;
+    display: block;
+}
+
+.nav-list li {
+    margin-left: 40px;
+    float: left;
+}
+
+.nav-list li:last-child {
+    margin-left: 90px;
+}
+
+.nav-list li a {
+    font: 18px "roboto-regular", sans-serif;
+    line-height: 40px;
+    color: #fff;
+}
+
+.menu-button,
+.close-popup {
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    background: none;
+    border: none;
+    display: none;
+}
+
+.close-popup {
+    display: block;
+}
+
+.menu-button span,
+.close-popup span {
+    margin: 10px 0;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 9px) ;
+    transform: rotate(-45deg) translate(-8px, 9px) ;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -9px) ;
+    transform: rotate(45deg) translate(-8px, -9px) ;
+}
+
+.introduction-text h2:before {
+    content: "";
+    width: 110px;
+    height: 110px;
+    margin-bottom: 70px;
+    display: block;
+    background: url("../images/background/introduction_text_before_bg.png") 50% 50% no-repeat;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.introduction-text h2 {
+    margin-bottom: 40px;
+    font: 64px "roboto-light", sans-serif;
+}
+
+.introduction-text h2 span {
+    font-family: "roboto-bold", sans-serif;
+}
+
+.introduction-text p {
+    margin-bottom: 50px;
+    font: 18px "roboto-light", sans-serif;
+    line-height: 30px;
+}
+
+.introduction-text a {
+    width: 137px;
+    height: 46px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.app-store {
+    background: url("../images/background/appstore_button.png") 45% -10% no-repeat;
+}
+
+.google-play {
+    margin-left: 30px;
+    background: url("../images/background/google_play_button.png") 65% -5% no-repeat;
+}
+
+.introduction-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------PRODUCT DESCRIPTION-----------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.product-description {
+    padding: 215px 0;
+}
+
+.description-container {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    max-width: 200px;
+    width: 100%;
+    position: relative;
+    border: 2px solid #e7e7e7;
+    border-left: none;
+    -webkit-border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    border-radius:  0 100% 100% 0 / 0 50% 50% 0;
+}
+
+.description-img {
+    max-width: 340px;
+    width: 100%;
+}
+
+.description-button-list button {
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    border: 2px solid transparent;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#list-button1 {
+    top: 0;
+    left: 0;
+    transform: translate(50%, -35%);
+    background:#e7e7e7 url("../images/background/list_button1_bg.png") 50% 50% no-repeat;
+    -webkit-background-size: 26px;
+    background-size: 26px;
+}
+
+#list-button2 {
+    top: 14%;
+    right: 3%;
+    background:#e7e7e7 url("../images/background/list_button2_bg.png") 50% 50% no-repeat;
+    -webkit-background-size: 26px;
+    background-size: 26px;
+}
+
+#list-button3 {
+    top: 50%;
+    right: 0%;
+    transform: translate(50%, -50%);
+    background:#e7e7e7 url("../images/background/list_button3_bg.png") 50% 50% no-repeat;
+    -webkit-background-size: 26px;
+    background-size: 26px;
+}
+#list-button4 {
+    right: 3%;
+    bottom: 14%;
+    background:#e7e7e7 url("../images/background/list_button4_bg.png") 50% 50% no-repeat;
+    -webkit-background-size: 26px;
+    background-size: 26px;
+}
+
+#list-button5 {
+    left: 0;
+    bottom: 0;
+    transform: translate(50%, 35%);
+    background:#e7e7e7 url("../images/background/list_button5_bg.png") 50% 50% no-repeat;
+    -webkit-background-size: 26px;
+    background-size: 26px;
+}
+
+.is-checked {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: #2ecc71 !important;
+    border-color: #fff !important;
+    -webkit-box-shadow: 0 0 100px rgba(0,0,0,.3);
+    box-shadow: 0 0 100px rgba(0,0,0,.3);
+}
+
+.description-text-list li {
+    display: none;
+}
+
+.description-text-list h2 {
+    margin-bottom: 30px;
+}
+
+.description-text-list p {
+    font: 18px "roboto-light", sans-serif;
+}
+
+.description-text-list h2 span {
+    color: #2ecc71;
+}
+
+#text-list-button3 {
+    display: block;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------PLAN-YOUR-DIET------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.plan-your-diet {
+    padding-top: 120px;
+    position: relative;
+}
+
+#plan-your-diet-bg {
+    background: url("../images/background/plan_your_diet_bg.png") 50% 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.plan-your-diet:before {
+    background: #f9f9f9;
+}
+
+.plan-your-diet-header {
+    margin-bottom: 110px;
+}
+
+.plan-your-diet-header h2 {
+    margin-bottom: 40px;
+}
+
+.plan-your-diet-header h2 span {
+    color: #2ecc71;
+}
+
+.plan-your-diet-header p {
+    font: 18px "roboto-light", sans-serif;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------MEAL--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.meal {
+    padding: 150px 0;
+}
+
+.meal-text h2 {
+    margin-bottom: 30px;
+}
+
+.meal-text p {
+    font: 18px "roboto-light", sans-serif;
+}
+
+.meal-text h2 span {
+    color: #2ecc71;
+}
+
+.meal-list li a {
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #dbdbda;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,.2);
+    box-shadow: 0 0 40px rgba(0,0,0,.2);
+}
+
+.meal-img {
+    width: 110px;
+    height: 60px;
+}
+
+.middle-meal-li {
+    transform: scale(1.2);
+}
+
+.meal-info {
+    margin-left: 10px;
+}
+
+.meal-info h3 {
+    margin-bottom: 15px;
+    color: #2ecc71;
+    font: 16px "roboto-bold", sans-serif;
+}
+
+.meal-info p {
+    margin-bottom: 15px;
+    color: #b4b4b4;
+    font: 12px "roboto-light", sans-serif;
+}
+
+.meal-info span {
+    color: #2ecc71;
+    font: 12px "roboto-bold", sans-serif;
+}
+
+.time {
+    margin-left: 90px;
+}
+
+.time span {
+    color: #2ecc71;
+    font: 25px "roboto-bold", sans-serif;
+}
+
+.time span:last-child {
+    color: #b4b4b4;
+}
+
+.meal-list li:first-child .time span {
+    color: #b4b4b4;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.main-footer {
+    padding: 110px 0;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+#footer-bg {
+    background: url("../images/background/footer_bg.png") 50% 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.footer-headline-wrapper h2 {
+    margin-bottom: 40px;
+}
+
+.footer-headline-wrapper h2 span {
+    font-family: "roboto-bold";
+}
+
+.footer-headline-wrapper p {
+    margin-bottom: 55px;
+    font: 18px "roboto-light", sans-serif;
+}
+
+.bottom-get-app-button {
+    width: 245px;
+}
+
+.popup {
+    padding: 12px 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(46,204,113,.85);
+    z-index: 3000;
+}
+
+.popup-button {
+    line-height: 50px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    border-radius: 15px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #2ecc71;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------OTHER----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+
+    .introduction {
+        padding-top: 100px;
+        text-align: center;
+    }
+    .introduction .row {
+        padding-bottom: 0;
+    }
+
+    .main-header {
+        padding-top: 10px;
+        position: fixed;
+        background: rgba(46,204,113,.85);
+    }
+
+    #intro-bg {
+        display: none;
+    }
+
+    .header-head {
+        width: 100%;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .main-nav {
+        width: 100%;
+        height: 100vh;
+        display: none;
+    }
+
+    .nav-list {
+        height: 100%;
+        float: none!important;
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+    }
+
+    .nav-list li,
+    .nav-list li button {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .nav-list li:last-child {
+        margin: 0;
+    }
+
+    .introduction-text {
+        margin-bottom: 50px;
+    }
+
+    .introduction-text h2:before {
+        margin: 0 auto;
+    }
+
+    .google-play {
+        margin: 0;
+    }
+
+    .introduction-img {
+        position: static;
+    }
+
+    .product-description {
+        padding:50px 0;
+    }
+
+    .description-container {
+        flex-direction: column;
+    }
+
+    .circle {
+        max-width: 100%;
+        margin-bottom: 50px;
+        border: none;
+        -webkit-border-radius: none;
+        border-radius: none;
+    }
+
+    .description-button-list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .description-button-list button {
+        transform: none !important;
+        position: static;
+        border: 2px solid transparent;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .description-text-list li {
+        text-align: center;
+    }
+
+    .meal-text {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .meal .align {
+        display: block;
+    }
+
+    .middle-meal-li {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
